@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://d08y7ouv5hh11"]
+
+[ext_resource type="Texture2D" uid="uid://y78ns2mfhwq0" path="res://assets/field.png" id="1_mninl"]
+[ext_resource type="PackedScene" uid="uid://3yjbvx8qie36" path="res://casa.tscn" id="2_e2hck"]
+[ext_resource type="PackedScene" uid="uid://br1tm4wk6xy0w" path="res://player.tscn" id="3_no01p"]
+
+[node name="mundo" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Field" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(414, 207)
+scale = Vector2(6, 6)
+texture = ExtResource("1_mninl")
+
+[node name="StaticBody2D" parent="." instance=ExtResource("2_e2hck")]
+position = Vector2(155, 159)
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("2_e2hck")]
+position = Vector2(528, 68)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("2_e2hck")]
+y_sort_enabled = true
+position = Vector2(250, 350)
+
+[node name="Jugador" parent="." instance=ExtResource("3_no01p")]
+y_sort_enabled = true
+position = Vector2(392, 201)
